@@ -1,0 +1,3 @@
+ ls -l /var/lib/waagent/ovf-env.xml
+ cat /var/lib/waagent/ovf-env.xml | grep -i custom
+ echo "full encription data"|base64 -d
