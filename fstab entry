@@ -1,4 +1,4 @@
-/dev/sdc   /app1 ext4 defaults 0 0
+/dev/sdc /mnt/app1 ext4 defaults 0 0
 dev -> normal
 sdc  -> disk name
 /app1 -> where to mount
