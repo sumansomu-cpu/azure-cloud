@@ -5,8 +5,17 @@ sdc  -> disk name
 ext3 or ext4 
 
 
-command to mount
+command to mount disk to particular mount-point
 sudo mount /mnt/app1
 
-command to umount 
-umount /mnt/app1
+command to mount all disks
+sudo mount -a
+
+command to umount all disks
+sudo umount -a
+
+command to umount particular mount-point
+sudo umount /mnt/app1
+
+
+
