@@ -3,3 +3,10 @@ dev -> normal
 sdc  -> disk name
 /app1 -> where to mount
 ext3 or ext4 
+
+
+command to mount
+sudo mount /mnt/app1
+
+command to umount 
+umount /mnt/app1
