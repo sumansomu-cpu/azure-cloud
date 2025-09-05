@@ -2,3 +2,36 @@ sudo yum install -y epel-release
 sudo pip3 install --upgrade --ignore-installed pip setuptools --user
 sudo python3 -m pip install ansible
 ansible --version
+
+
+vi /etc/hosts
+private ip servername
+private ip servername
+
+cat /etc/hosts
+
+mkdir ansible
+cd ansible
+touch {ansible.cfg,ansiblehosts}
+ls
+vi ansible.cfg
+[defaults]
+remote_user = "ec2-user"
+inventory = /root/ansible/ansiblehosts
+private_key_file = /root/ansible/mykey.pem
+host_key_checking = false
+interpreter_python = auto_silent
+deprecation_warnings = False
+
+
+vi /root/ansible/ansiblehosts
+[dev]
+slave1
+cat /root/ansible/ansiblehosts
+
+
+vi /root/ansible/mykey.pem
+paste pem key 
+chmod 600 /root/ansible/mykey.pem
+
+ansible -m command -a uptime "uptime" all
