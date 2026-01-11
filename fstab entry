@@ -20,3 +20,29 @@ sudo umount /mnt/app1
 
 
 
+
+---- CORRECT WAY TO GIVE ETC/FSTAB entry
+
+
+lsblk
+format the disk if it is new ,if consuming SS of disk no need to format
+mkfs.ext4 /dev/sdc 
+mkdir /app1
+mount -t ext4 /dev/sdc /app1
+echo "im this" > /app1/disk.data
+ls -l /app1
+cat /app1/disk.data
+
+
+
+lsblk -f
+get the UUID of the disk of you want to do permanent mounting
+
+vi /etc/fstab
+UUID=af8d11a8-0d0d-4657-912b-5e12afd46a10 /app1 ext4 defaults 0 0
+
+cat /etc/fstab
+sudo mount -a
+init 6
+relogin again and see if you can see it mounted automatically
+
