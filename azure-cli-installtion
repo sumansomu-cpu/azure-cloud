@@ -12,3 +12,6 @@ az login
 
 if going with ubuntu as operating system
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+to check version
+az --version
