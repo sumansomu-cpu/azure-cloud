@@ -7,3 +7,8 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
 sudo yum install azure-cli -y 
 az login
+
+
+
+if going with ubuntu as operating system
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
